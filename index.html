@@ -135,6 +135,23 @@ const messages = {
     ]
 };
 
+const pools = {};
+
+function getMessage(type) {
+    if (!pools[type] || pools[type].length === 0) {
+        pools[type] = [...messages[type]];
+        shuffle(pools[type]);
+    }
+    return pools[type].pop();
+}
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 function showRandom(type) {
     const card = document.getElementById("card");
     const list = messages[type];
@@ -146,4 +163,5 @@ function showRandom(type) {
 
 </body>
 </html>
+
 
