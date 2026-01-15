@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Mantasha 💗</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ffd6e8, #fff1f7);
+    color: #4a2a36;
+    overflow-x: hidden;
+}
+
+.photo {
+    position: fixed;
+    top: 80px;
+    width: 150px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.left {
+    left: 10px;
+    margin-left: 20px;
+}
+
+.right {
+    right: 10px;
+    margin-right: 25px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 14px;
+    font-size: 18px;
+    background: #ff85b3;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff5c9f;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    margin-top: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Replace these with her real photos -->
+<img src="photo1.jpg" class="photo left">
+<img src="photo2.jpg" class="photo right">
+
+<div class="container">
+
+<h1>Good morning my baby 🌷</h1>
+<p>
+Mantasha, my love…  
+I might not know how to comfort you the best at this moment,
+but i'll always try my best to keep you smiling.<br>
+Everytime you click on the buttons it shows a new message.
+</p>
+
+<div class="buttons">
+    <button onclick="showRandom('pain')">💗 I’m in pain</button>
+    <button onclick="showRandom('anxiety')">🌿 I feel anxious</button>
+    <button onclick="showRandom('smile')">😊 Make me smile</button>
+    <button onclick="showRandom('miss')">🥺 I miss you</button>
+</div>
+
+<div id="card" class="card"></div>
+
+</div>
+
+<script>
+const messages = {
+    pain: [
+        "Meri jaan, I know it hurts right now. But I’m right here with you. Is there anyway I can help you? Maybe chocolates or flowers or Me?",
+        "Baby, you don’t have to be strong today. No need to do anything. Just rest. You and your bed😊",
+        "Sweetheart, close your eyes and imagine me sitting there with you, kissing your forehead, wrapping you in my arms, holding you close. I love you baby!",
+        "Just call me when it’s too much, and I’ll be your Superman."
+    ],
+    anxiety: [
+        "I'm soo proud of you baby don't worry I'm always there by your side. Through all thick and thins. Through all highs and lows, we're in it together!",
+        "You mean the world to me jaan! It's okay if you feel anxious but know that you're safe with me. This will pass.",
+        "Getting a girlfriend that's beautiful is Luck, someone that's caring is better, but both? Well that's GOD's Grace! You're my GOD's Grace baby.",
+        "My baby, You are a piece of exquisite art carefully painted by the colours of life. A masterpiece of GOD and his divine light. I love you forever!"
+    ],
+    smile: [
+        "Baby, you look adorable even when you're tired or in pain. Gorgeous as always. Breathtakingly stunning and I love you itnnaaaaaaaaaaaa saaaaaaaaaaraaaaaaaaaaaa",
+        "Cutie, your smile is my favorite thing in this entire world.",
+        "If you smile, I'll watch drama with you. Pakka Promise.",
+        "Please smile kardo jaan, I love your adorable smile, It's for me baby. You happy, I happy. Everyone Happy happy happpyyy!",
+        "I've heard the song you told me to and it's great😊"
+    ],
+    miss: [
+        "Jaan, I miss you too.",
+        "Baby, just call me, I'll love you itnaa saaraa ki you'll forget all your discomfort",
+        "Princess, You have BlinkIt premium. Delivering your boyfriend to your campus in under 10 minutes ;)",
+        "I'll soon come and meet you. Then eat you up my sweet sweet ras malai😘",
+    ]
+};
+
+function showRandom(type) {
+    const card = document.getElementById("card");
+    const list = messages[type];
+    const random = list[Math.floor(Math.random() * list.length)];
+    card.innerText = random;
+    card.style.display = "block";
+}
+</script>
+
+</body>
+</html>
